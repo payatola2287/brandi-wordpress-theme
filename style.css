@@ -348,6 +348,7 @@ big {
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
+    font-size: 16px;
 }
 
 *,
@@ -887,4 +888,45 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+/* ==========================================================================
+    Navigation and Menu
+   ========================================================================== */
+.navbar-toggle .icon-bar{
+    background: #0eb493;
+}
+.main-nav{
+    background: #101636;
+    background: rgba(16,22,54,0.2);
+    margin: 0;
+    border: 0;
+    transition: background 0.2s linear;
+}
+.main-nav.scrolled{
+    background: #101636;
+}
+.main-nav .navbar-brand{
+    margin: 0;
+}
+.main-nav .navbar-text,
+.main-menu a{
+    color : #fff;
+}
+.main-menu a{
+    border-top: 1px solid transparent;
+}
+.main-menu .active a,
+.main-menu a:hover{
+    border-top: 1px solid #32b0ee;
+}
+.main-menu>li>a:focus,
+.main-menu>li>a:hover{
+    background: 0;
+    outline: 0;
+}
+/* ==========================================================================
+    Site Title
+   ========================================================================== */
+.site-title{
+    color: #fff;
 }

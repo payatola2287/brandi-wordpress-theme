@@ -26,15 +26,8 @@ function brandi_create_options() {
 	    'name' => __( 'Theme Options', 'brandi' ),
 	) );
 	
-	$section->createOption( array(
-	    'name' => __( 'Background Color', 'brandi' ),
-	    'id' => 'sample_color1',
-	    'type' => 'color',
-	    'desc' => __( 'This color changes the background of your theme', 'brandi' ),
-	    'default' => '#FFFFFF',
-		'css' => 'body { background-color: value }',
-	) );
-	
+    
+    
 	$section->createOption( array(
 	    'name' => __( 'Headings Font', 'brandi' ),
 	    'id' => 'headings_font',
@@ -50,10 +43,12 @@ function brandi_create_options() {
 	    'show_font_variant' => false,
 	    'show_text_shadow' => false,
 	    'default' => array(
-	        'font-family' => 'Fauna One',
+	        'font-family' => 'Open Sans',
 	    ),
 		'css' => 'h1, h2, h3, h4, h5, h6 { value }',
 	) );
+    
+    
 	
 	
 	/**
@@ -68,7 +63,20 @@ function brandi_create_options() {
 	$generalTab = $adminPanel->createTab( array(
 	    'name' => __( 'General', 'brandi' ),
 	) );
-
+	$generalTab->createOption( array(
+	    'name' => __( 'Logo', 'brandi' ),
+	    'id' => 'logo',
+	    'type' => 'upload',
+	    'desc' => __( 'Upload your logo. Leaving this blank will use your site name.', 'brandi' ),
+	    'default' => get_template_directory_uri(). '/img/logo.png',
+	) );
+    $generalTab->createOption( array(
+	    'name' => __( 'Favicon', 'brandi' ),
+	    'id' => 'favicon',
+	    'type' => 'upload',
+	    'desc' => __( 'Upload your logo. Leaving this blank will use your site name.', 'brandi' ),
+	    'default' => get_template_directory_uri(). '/img/favicon.ico',
+	) );
 	$generalTab->createOption( array(
 	    'name' => __( 'Custom Javascript Code', 'brandi' ),
 	    'id' => 'custom_js',
@@ -81,7 +89,49 @@ function brandi_create_options() {
 	    'type' => 'save',
 	) );
 	
-	
+    $headerTab = $adminPanel->createTab( array(
+	    'name' => __( 'Header', 'brandi' ),
+	) );
+    
+    $headerTab->createOption( array(
+	    'name' => __( 'Company Name Typography', 'brandi' ),
+	    'id' => 'navbar_brand_text',
+	    'type' => 'font',
+	    'desc' => __( 'Select the font for your company name if you don\'t want to use a logo', 'brandi' ),
+		'show_color' => true,
+		'show_font_size' => true,
+	    'show_font_weight' => false,
+	    'show_font_style' => false,
+	    'show_line_height' => false,
+	    'show_letter_spacing' => false,
+	    'show_text_transform' => false,
+	    'show_font_variant' => false,
+	    'show_text_shadow' => false,
+        'show_preview' => false,
+	    'default' => array(
+	        'font-family' => 'Open Sans',
+            'color' => '#fff',
+            'font-size' => '25px'
+	    ),
+		'css' => '.navbar-brand{ value }',
+	) );
+    
+	$headerTab->createOption( array(
+	    'name' => __( 'Main Navigation Style', 'brandi' ),
+	    'id' => 'nav_style',
+	    'type' => 'select',
+	    'desc' => 'The attachment of the navigation to the page',
+        'options' => array(
+            'navbar-fixed-top' => 'Fixed on top',
+            'navbar-static-top' => 'Static',
+        ),
+        'default' => 'navbar-fixed-top',
+	) );
+    
+    $headerTab->createOption( array(
+	    'type' => 'save',
+	) );
+    
 	$footerTab = $adminPanel->createTab( array(
 	    'name' => __( 'Footer', 'brandi' ),
 	) );

@@ -114,8 +114,54 @@ add_action( 'widgets_init', 'brandi_widgets_init' );
  * Enqueue scripts and styles.
  */
 function brandi_scripts() {
+    /***************** 
+     *  Stylesheets  *
+     *****************/
+    //Normalize
+	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.min.css' );
+    
+    //Font Awesome
+    wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
+    
+    //Bootstrap Stylesheet
+    wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' );
+    
+    //Animate
+	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.css' );
+    
+    //Main Stylesheet
 	wp_enqueue_style( 'brandi-style', get_stylesheet_uri() );
 
+    /************* 
+     *  Scripts  *
+     *************/
+    //jQuery
+    wp_enqueue_script( 'jquery' );
+    
+    //Modernizr
+    wp_enqueue_script( 'modernizr-2.8.3', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', array() );
+    
+    //Picturefill
+    wp_enqueue_script( 'picturefill', 'https://cdn.rawgit.com/scottjehl/picturefill/master/dist/picturefill.min.js', array() );
+    
+    //Bootstrap
+    wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array( 'jquery' ) );
+    
+    //Mixitup
+    wp_enqueue_script( 'mixitup', 'https://cdn.jsdelivr.net/jquery.mixitup/2.1.11/jquery.mixitup.min.js', array( 'jquery' ) );
+    
+    //Scrollspy
+    wp_enqueue_script( 'scrollspy', get_template_directory_uri() . '/js/scrollspy.js', array( 'jquery' ) );
+    
+    //Plugins
+    wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array( 'jquery' ) );
+    
+    //Viewport Checker
+    wp_enqueue_script( 'viewport-checker', 'https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.7/jquery.viewportchecker.min.js', array( 'jquery' ) );
+    
+    //Main
+    wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ) );
+    
 	wp_enqueue_script( 'brandi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'brandi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -154,7 +200,12 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load Titan Framework plugin checker
  */
-require get_template_directory() . '/titan-framework-checker.php';
+//require get_template_directory() . '/titan-framework-checker.php';
+
+/**
+ * Load Titan Framework embed checker
+ */
+require_once( 'titan-framework/titan-framework-embedder.php' );
 
 /**
  * Load Titan Framework options
