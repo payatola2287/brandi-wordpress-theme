@@ -114,12 +114,32 @@ add_action( 'widgets_init', 'brandi_widgets_init' );
  * Enqueue scripts and styles.
  */
 function brandi_scripts() {
+    $min = WP_DEBUG && WP_DEBUG == true ? '': '.min';
+    
+    /** 
+     * Load Bootstrap Style   
+     */
+    wp_enqueue_style( 'bootstrap',get_template_directory_uri() . '/plugins/bootstrap/css/bootstrap' . $min . '.css' );
+    /** 
+     * Load Theme Style   
+     */
+    wp_enqueue_style( 'brandi-main',get_template_directory_uri() . '/css/main' . $min . '.css' );
+    
 	wp_enqueue_style( 'brandi-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'brandi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    
+    /** 
+     * Load jQuery   
+     */
+	wp_enqueue_script( 'jquery', array(), false, true );
 
 	wp_enqueue_script( 'brandi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+    /** 
+     * Load Bootstrap Scripts   
+     */
+    wp_enqueue_script( 'bootstrap',get_template_directory_uri() . '/plugins/bootstrap/js/bootstrap' . $min . '.js', array( 'jquery' ) );
+    
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -145,6 +165,11 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Bootstrap Nav Menu Walker.
+ */
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 /**
  * Load Jetpack compatibility file.
