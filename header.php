@@ -71,3 +71,5 @@ $logoSrc = '';
             </header><!-- #masthead -->
 
             <div id="content" class="site-content">
+                <div class="container" id="main-content-wrapper">
+                    <div class="row"></div>
