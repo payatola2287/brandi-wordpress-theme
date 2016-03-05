@@ -44,6 +44,15 @@ h4,
 h5,
 h6 {
 	clear: both;
+    color: #0eb493;
+    font-weight: 700;
+}
+
+.entry-title,
+.entry-title a,
+.widget-title{
+    font-size: 28px;
+    font-weight: 900;
 }
 
 p {
@@ -289,17 +298,18 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #0eb493;
 }
 
 a:visited {
-	color: purple;
+	color: #086553;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #086553 ;
+    text-decoration: none;
 }
 
 a:focus {
@@ -523,6 +533,10 @@ a:active {
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
+}
+
+.widget > ul{
+    margin: 0;
 }
 
 

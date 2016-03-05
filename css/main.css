@@ -11,7 +11,6 @@
 # Alignments
 # Clearings
 # Widgets
-# Site Header
 # Content
 	## Posts and pages
 	## Asides
@@ -33,6 +32,13 @@ body, button, input, select, textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+    color: #0eb493;
+    font-weight: 700;
+}
+
+.entry-title, .entry-title a, .widget-title{
+    font-size: 28px;
+    font-weight: 900;
 }
 
 p {
@@ -205,15 +211,16 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #0eb493;
 }
 
 a:visited {
-	color: purple;
+	color: #086553;
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: #086553 ;
+    text-decoration: none;
 }
 
 a:focus {
@@ -407,17 +414,11 @@ a:hover, a:active {
 	max-width: 100%;
 }
 
-/*--------------------------------------------------------------
-# Site Header
---------------------------------------------------------------*/
-.site-title{
+.widget > ul{
     margin: 0;
 }
-.tagline:before{
-    content: "|";
-    display: inline-block;
-    margin: 0 25px 0 0;
-}
+
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
