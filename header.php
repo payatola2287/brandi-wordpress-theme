@@ -62,6 +62,7 @@ $logoSrc = '';
                             'container_class' => 'collapse navbar-collapse',
                             'menu_id' => 'main-menu',
                             'menu_class' => 'nav navbar-nav navbar-right',
+                            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                             'walker' => new wp_bootstrap_navwalker()
                         ) );
                         ?>
