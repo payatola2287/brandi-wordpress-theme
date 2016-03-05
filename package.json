@@ -1,0 +1,22 @@
+{
+  "name": "brandi",
+  "version": "1.2.0",
+  "description": "Wordpress Theme",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "responsive",
+    "template"
+  ],
+  "author": "Paolo Gallardo",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "precss": "^1.4.0"
+  }
+}

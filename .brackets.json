@@ -1,6 +1,5 @@
 {
     "jscodehints.detectedExclusions": [
-        "C:/xampp/htdocs/mine/wp-content/themes/brandi/js/main.js",
-        "C:/xampp/htdocs/mine/wp-content/themes/brandi/titan-framework/js/ace-min-noconflict/snippets/text.js"
+        "C:/Users/Paolo/Desktop/xampp/htdocs/wordpress/wp-content/themes/brandi/Gruntfile.js"
     ]
 }
