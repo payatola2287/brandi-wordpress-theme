@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -24,6 +25,9 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
+        <?php if( is_sticky() ): ?>
+            <span class="badge sticky-badge theme-badge"><i class="glyphicon glyphicon-pushpin"></i></span>
+        <?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

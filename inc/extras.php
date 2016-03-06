@@ -27,3 +27,13 @@ function brandi_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'brandi_body_classes' );
+
+
+/**
+ * Adds custom class to tables in the content
+ * 
+ */
+function brandi_custom_content_table_class( $content ) {
+    return str_replace( '<table>', '<table class="table table-stripped">', $content );
+}
+add_filter( 'the_content', 'brandi_custom_content_table_class' );
