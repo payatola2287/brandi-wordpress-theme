@@ -34,6 +34,6 @@ add_filter( 'body_class', 'brandi_body_classes' );
  * 
  */
 function brandi_custom_content_table_class( $content ) {
-    return str_replace( '<table>', '<table class="table table-stripped">', $content );
+    return str_replace( '<table>', '<table class="table table-bordered table-hover">', $content );
 }
 add_filter( 'the_content', 'brandi_custom_content_table_class' );

@@ -44,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+.entry-title{
+    margin: 0 0 10px;
+}
+
 .entry-title, .entry-title a, .widget-title{
     font-size: 28px;
     font-weight: 900;
@@ -59,6 +63,10 @@ dfn, cite, em, i {
 
 blockquote {
     margin: 0 1.5em;
+    border-color: #0eb493;
+}
+blockquote, blockquote *{
+    font-style: italic;
 }
 
 address {
@@ -332,6 +340,18 @@ a:hover, a:active {
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
     float: left;
     width: 50%;
+}
+
+.comment-navigation .nav-previous:before, .posts-navigation .nav-previous:before, .post-navigation .nav-previous:before {
+        position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {

@@ -35,7 +35,7 @@ input,
 select,
 textarea {
     color: $textColor;
-/*    font-family: $baseFontFam;*/
+    /*    font-family: $baseFontFam;*/
     font-size: $baseTextSize;
     line-height: $baseLineHeight;
 }
@@ -66,6 +66,10 @@ h6 {
     margin: 0;
 }
 
+.entry-title{
+    margin: 0 0 10px;
+}
+
 .entry-title,
 .entry-title a,
 .widget-title{
@@ -86,6 +90,11 @@ i {
 
 blockquote {
     margin: 0 1.5em;
+    border-color: $mainColor;
+}
+blockquote,
+blockquote *{
+    font-style: italic;
 }
 
 address {
@@ -445,6 +454,20 @@ a:active {
 .post-navigation .nav-previous {
     float: left;
     width: 50%;
+}
+
+.comment-navigation .nav-previous:before,
+.posts-navigation .nav-previous:before,
+.post-navigation .nav-previous:before {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .comment-navigation .nav-next,
