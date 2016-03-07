@@ -402,6 +402,7 @@ a:hover, a:active {
 
 .blog .hentry{
     border-bottom: 3px solid #6a737b;
+    position: relative;
 }
 
 .blog .hentry:last-child{

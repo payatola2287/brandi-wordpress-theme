@@ -527,6 +527,7 @@ a:active {
 
 .blog .hentry{
     border-bottom: 3px solid $textColor;
+    position: relative;
 }
 
 .blog .hentry:last-child{
