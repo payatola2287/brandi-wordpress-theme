@@ -23,7 +23,7 @@ $logoSrc = '';
         <div id="page" class="site">
             <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'brandi' ); ?></a>
             <header id="masthead" class="site-header" role="banner">
-                <nav class="navbar navbar-default">
+                <nav class="navbar navbar-default site-nav">
                     <div class="container">
                         <header class="navbar-header site-branding">
                             <?php if ( is_front_page() && is_home() ) : ?>
@@ -61,7 +61,7 @@ $logoSrc = '';
                             'container_id' => 'main-nav-wrapper',
                             'container_class' => 'collapse navbar-collapse',
                             'menu_id' => 'main-menu',
-                            'menu_class' => 'nav navbar-nav navbar-right',
+                            'menu_class' => 'nav navbar-nav navbar-right theme-navbar',
                             'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                             'walker' => new wp_bootstrap_navwalker()
                         ) );
