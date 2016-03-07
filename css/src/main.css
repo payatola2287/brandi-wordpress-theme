@@ -605,6 +605,15 @@ a:active {
 
 .hentry {
     margin: 0 0 1.5em;
+    padding: @margin;
+}
+
+.blog .hentry{
+    border-bottom: 5px solid $mainColor;
+}
+
+.blog .hentry:last-child{
+    border-bottom: 0;
 }
 
 .byline,
