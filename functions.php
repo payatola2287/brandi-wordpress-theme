@@ -175,3 +175,8 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Include the Bootstrap Comment Form
+ */
+require get_template_directory() . '/inc/comment_form.php';
