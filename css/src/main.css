@@ -22,6 +22,7 @@ $darkMainColor : color($mainColor lightness(-10%));
 ## Posts and pages
 ## Asides
 ## Comments
+## Avatars
 # Infinite scroll
 # Media
 ## Captions
@@ -601,12 +602,19 @@ a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comment-list{
+    margin: 0;
+}
 .comment-content a {
     word-wrap: break-word;
 }
 
 .bypostauthor {
     display: block;
+}
+
+.media-body{
+    width: initial;
 }
 
 /*--------------------------------------------------------------

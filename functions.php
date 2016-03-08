@@ -180,3 +180,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Include the Bootstrap Comment Form
  */
 require get_template_directory() . '/inc/comment_form.php';
+
+/**
+ * Include the Bootstrap Comment List
+ */
+require get_template_directory() . '/inc/class-wp-bootstrap-comment-walker.php';

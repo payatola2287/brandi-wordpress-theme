@@ -15,6 +15,7 @@
 ## Posts and pages
 ## Asides
 ## Comments
+## Avatars
 # Infinite scroll
 # Media
 ## Captions
@@ -461,12 +462,19 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comment-list{
+    margin: 0;
+}
 .comment-content a {
     word-wrap: break-word;
 }
 
 .bypostauthor {
     display: block;
+}
+
+.media-body{
+    width: initial;
 }
 
 /*--------------------------------------------------------------
