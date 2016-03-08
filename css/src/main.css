@@ -4,6 +4,7 @@ $baseFontFam : "Open Sans";
 $mainColor: #0eb493;
 $textColor: #6a737b;
 $headingColor: #062033;
+$darkMainColor : color($mainColor lightness(-10%));
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -68,6 +69,10 @@ h6 {
 
 .entry-title{
     margin: 0 0 10px;
+}
+
+.post-thumbnail + .entry-header .entry-title{
+    margin: 20px 0 10px;
 }
 
 .entry-title,
@@ -335,14 +340,16 @@ a {
     color: #0eb493;
 }
 
-a:visited {
-    color: #086553;
+a:visited,
+a:hover,
+a:focus,
+a:active{
+    color: #$darkMainColor;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: #086553 ;
     text-decoration: none;
 }
 
@@ -393,6 +400,24 @@ a:active {
     float: right;
     text-align: right;
     width: 50%;
+}
+
+.posts-pager{
+    margin: 0;
+}
+
+.posts-pager li > a,
+.posts-pager li > span{
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    background: $mainColor;
+}
+
+.posts-pager li > a:hover,
+.posts-pager li > a:focus,
+.posts-pager li > span:hover{
+    background: $darkMainColor;
 }
 
 /*--------------------------------------------------------------
@@ -532,6 +557,10 @@ a:active {
 
 .blog .hentry:last-child{
     border-bottom: 0;
+}
+
+.post-meta-icon{
+    font-size: 10px;
 }
 
 .byline,

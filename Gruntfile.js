@@ -13,6 +13,7 @@ module.exports = function(grunt) {
               },
               processors: [
                 require('precss')({ /* options */ }),
+                require('postcss-color-function'),
                 require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
               ]
             },

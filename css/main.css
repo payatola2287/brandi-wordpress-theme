@@ -48,6 +48,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 10px;
 }
 
+.post-thumbnail + .entry-header .entry-title{
+    margin: 20px 0 10px;
+}
+
 .entry-title, .entry-title a, .widget-title{
     font-size: 28px;
     font-weight: 900;
@@ -237,12 +241,11 @@ a {
     color: #0eb493;
 }
 
-a:visited {
-    color: #086553;
+a:visited, a:hover, a:focus, a:active{
+    color: rgb(10, 133, 108);
 }
 
 a:hover, a:focus, a:active {
-    color: #086553 ;
     text-decoration: none;
 }
 
@@ -284,6 +287,21 @@ a:hover, a:active {
     float: right;
     text-align: right;
     width: 50%;
+}
+
+.posts-pager{
+    margin: 0;
+}
+
+.posts-pager li > a, .posts-pager li > span{
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    background: #0eb493;
+}
+
+.posts-pager li > a:hover, .posts-pager li > a:focus, .posts-pager li > span:hover{
+    background: rgb(10, 133, 108);
 }
 
 /*--------------------------------------------------------------
@@ -407,6 +425,10 @@ a:hover, a:active {
 
 .blog .hentry:last-child{
     border-bottom: 0;
+}
+
+.post-meta-icon{
+    font-size: 10px;
 }
 
 .byline, .updated:not(.published) {
