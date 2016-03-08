@@ -427,6 +427,29 @@ a:active {
     background: $darkMainColor;
 }
 
+.site-nav .theme-navbar > li > a,
+.site-nav .theme-navbar .dropdown-menu > li > a{
+    border-top: 1px solid transparent;
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus,
+.site-nav .theme-navbar > li.active > a,
+.site-nav .theme-navbar > li.active > a:hover,
+.site-nav .theme-navbar > li > a:hover,
+.site-nav .theme-navbar .dropdown-menu > li > a:hover,
+.site-nav .theme-navbar .dropdown-menu > li.active > a:hover{
+    border-top: 1px solid #32b0ee;
+    background-color: transparent;
+}
+
+.site-nav .theme-navbar .dropdown-menu{
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -597,6 +620,10 @@ a:active {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
     display: none;
+}
+
+.sidebar{
+    border-left: 1px solid $mainColor;
 }
 
 /*--------------------------------------------------------------
