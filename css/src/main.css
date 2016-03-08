@@ -23,6 +23,7 @@ $darkMainColor : color($mainColor lightness(-10%));
 ## Asides
 ## Comments
 ## Avatars
+# Site Footer
 # Infinite scroll
 # Media
 ## Captions
@@ -369,6 +370,10 @@ a:active {
     outline: 0;
 }
 
+.site-footer,
+.site-footer a{
+    color: #fff;
+}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -643,6 +648,16 @@ a:active {
 .media-body{
     width: initial;
 }
+
+/*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+.site-footer{
+    background: $mainColor;
+    border-top: 5px solid $headingColor;
+    padding: 50px 0;
+}
+
 
 /*--------------------------------------------------------------
 # Infinite scroll

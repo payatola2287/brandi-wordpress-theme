@@ -10,17 +10,19 @@
  */
 
 ?>
-            </div>
-        </div><!-- #main-content-wrapper -->
-	</div><!-- #content -->
+</div>
+</div><!-- #main-content-wrapper -->
+</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brandi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'brandi' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'brandi' ), 'brandi', '<a href="http://paologallardo.com" rel="designer">paologallardo</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="site-info">
+            <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brandi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'brandi' ), 'WordPress' ); ?></a>
+            <span class="sep"> | </span>
+            <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'brandi' ), 'brandi', '<a href="http://paologallardo.com" rel="designer">paologallardo</a>' ); ?>
+        </div><!-- .site-info -->
+    </div>
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

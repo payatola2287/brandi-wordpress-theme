@@ -16,6 +16,7 @@
 ## Asides
 ## Comments
 ## Avatars
+# Site Footer
 # Infinite scroll
 # Media
 ## Captions
@@ -261,6 +262,9 @@ a:hover, a:active {
     outline: 0;
 }
 
+.site-footer, .site-footer a{
+    color: #fff;
+}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -495,6 +499,16 @@ a:hover, a:active {
 .media-body{
     width: initial;
 }
+
+/*--------------------------------------------------------------
+# Site Footer
+--------------------------------------------------------------*/
+.site-footer{
+    background: #0eb493;
+    border-top: 5px solid #062033;
+    padding: 50px 0;
+}
+
 
 /*--------------------------------------------------------------
 # Infinite scroll
